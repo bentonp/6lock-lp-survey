@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP Experience Survey | 6lock</title>
+    <meta name="description" content="A 4-minute, anonymous pulse of how Limited Partners experience capital calls and distributions today. Shape the first longitudinal LP experience dataset in PE.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://api.emailjs.com https://script.google.com; img-src 'self' data:;">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=Manrope:wght@400;500;600;800&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="progress-bar" class="progress-bar" aria-hidden="true">
+        <div id="progress-fill" class="progress-fill"></div>
+    </div>
+
+    <header class="header">
+        <svg class="logo" width="80" height="23" viewBox="0 0 80 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="6lock">
+            <path d="M8.14941 7.72363C8.33275 7.70872 8.5258 7.70117 8.72852 7.70117C10.0574 7.70118 11.245 8.01356 12.292 8.6377C13.3591 9.24173 14.2151 10.0774 14.8594 11.1445C15.5036 12.1915 15.8262 13.3995 15.8262 14.7686C15.8261 16.1577 15.4732 17.4266 14.7686 18.5742C14.0639 19.7015 13.1175 20.5974 11.9297 21.2617C10.7418 21.9261 9.40296 22.2588 7.91309 22.2588C6.4232 22.2588 5.07424 21.9261 3.86621 21.2617C2.67827 20.5973 1.73205 19.7109 1.02734 18.6035C0.342904 17.4761 6.22353e-05 16.2182 0 14.8291C0 13.017 0.634846 11.1844 1.90332 9.33203L7.91309 0.603516H13.2588L8.14941 7.72363ZM33.1309 6.91602C34.6609 6.91602 36.0303 7.24779 37.2383 7.91211C38.4464 8.57655 39.4027 9.49333 40.1074 10.6611C40.8121 11.8087 41.165 13.1071 41.165 14.5566C41.165 16.0063 40.8121 17.3156 40.1074 18.4834C39.4027 19.6511 38.4463 20.5772 37.2383 21.2617C36.0303 21.9261 34.661 22.2588 33.1309 22.2588C31.6208 22.2588 30.2516 21.9261 29.0234 21.2617C27.8155 20.5772 26.859 19.6511 26.1543 18.4834C25.4496 17.3156 25.0977 16.0063 25.0977 14.5566C25.0977 13.1072 25.4497 11.8087 26.1543 10.6611C26.859 9.51347 27.8154 8.60682 29.0234 7.94238C30.2315 7.25784 31.6007 6.91604 33.1309 6.91602ZM50.623 6.91602C51.7705 6.91602 52.8175 7.11697 53.7637 7.51953C54.5043 7.81269 55.1795 8.22526 55.79 8.75488L53.3193 12.1768C52.9882 11.8224 52.6034 11.558 52.1631 11.3857C51.7202 11.2046 51.2069 11.1143 50.623 11.1143C49.9586 11.1143 49.3643 11.2654 48.8408 11.5674C48.3377 11.8493 47.9347 12.252 47.6328 12.7754C47.3511 13.2786 47.21 13.8724 47.21 14.5566C47.21 15.2412 47.3509 15.8456 47.6328 16.3691C47.9348 16.8926 48.3477 17.3054 48.8711 17.6074C49.3946 17.9094 49.9787 18.0605 50.623 18.0605C51.2271 18.0605 51.7605 17.9592 52.2236 17.7578C52.6716 17.5525 53.0579 17.2773 53.3848 16.9336L55.8271 20.3535C55.2076 20.8978 54.5304 21.3321 53.7939 21.6543C52.8276 22.0569 51.7503 22.2588 50.5625 22.2588C49.0525 22.2588 47.6832 21.9261 46.4551 21.2617C45.227 20.5973 44.2603 19.6814 43.5557 18.5137C42.851 17.3459 42.499 16.0366 42.499 14.5869C42.4991 13.1173 42.8511 11.8087 43.5557 10.6611C44.2805 9.49333 45.2571 8.57655 46.4854 7.91211C47.7135 7.24772 49.0929 6.91602 50.623 6.91602ZM22.8096 21.9258H18.1885V0H22.8096V21.9258ZM61.8613 13.8115L66.6025 7.24805H71.7676L66.3994 14.168L72.0693 21.9258H66.6328L61.8613 14.8535V21.9258H57.2402V0H61.8613V13.8115ZM7.91309 11.2646C7.26878 11.2646 6.69477 11.4158 6.19141 11.7178C5.70825 11.9996 5.32581 12.4024 5.04395 12.9258C4.76206 13.4291 4.62109 14.0133 4.62109 14.6777C4.6211 15.322 4.76207 15.9062 5.04395 16.4297C5.32582 16.9531 5.70825 17.366 6.19141 17.668C6.69476 17.97 7.26879 18.1211 7.91309 18.1211C8.53723 18.1211 9.10114 17.97 9.60449 17.668C10.1078 17.366 10.5004 16.9531 10.7822 16.4297C11.0641 15.9062 11.2051 15.322 11.2051 14.6777C11.2051 14.0133 11.0641 13.4291 10.7822 12.9258C10.5004 12.4024 10.1078 11.9996 9.60449 11.7178C9.10114 11.4158 8.53724 11.2647 7.91309 11.2646ZM33.1309 11.1143C32.4866 11.1143 31.9125 11.2654 31.4092 11.5674C30.906 11.8493 30.5132 12.2521 30.2314 12.7754C29.9497 13.2987 29.8086 13.9026 29.8086 14.5869C29.8086 15.2514 29.9496 15.8558 30.2314 16.3994C30.5133 16.9228 30.9059 17.3357 31.4092 17.6377C31.9125 17.9196 32.4866 18.0605 33.1309 18.0605C33.7953 18.0605 34.3795 17.9196 34.8828 17.6377C35.3861 17.3357 35.7685 16.9228 36.0303 16.3994C36.3122 15.8558 36.4531 15.2412 36.4531 14.5566C36.4531 13.8723 36.312 13.2786 36.0303 12.7754C35.7484 12.252 35.3558 11.8493 34.8525 11.5674C34.3693 11.2654 33.7953 11.1143 33.1309 11.1143Z" fill="currentColor"/>
+            <path d="M77.7492 21.9826L75.9927 18.0171H76.7039L77.9324 20.9266L79.1608 18.0171H79.872L78.1156 21.9826H77.7492ZM75.8634 21.9826V18.0171H76.5531V21.9826H75.8634ZM79.3117 21.9826V18.0171H80.0013V21.9826H79.3117ZM73.2772 21.9826V18.3619H73.9669V21.9826H73.2772ZM72.0703 18.6205V18.0171H75.1738V18.6205H72.0703Z" fill="currentColor"/>
+        </svg>
+    </header>
+
+    <main class="container">
+
+        <!-- Screen 1: Landing -->
+        <div id="screen-landing" class="screen active">
+            <div class="landing">
+                <p class="landing__label">LP Experience Survey</p>
+                <h1 class="landing__headline">How do you rate your current capital call experience?</h1>
+                <p class="landing__body">Limited Partners experience PE capital events from a side no one publishes data about. This 4-minute anonymous survey changes that. Your input shapes the <strong>PE Capital Trust Report</strong> &mdash; the first longitudinal dataset on LP experience, friction, and trust during capital calls and distributions.</p>
+                <button id="btn-start" class="btn btn--primary">Share Your Perspective</button>
+                <p class="landing__trust">Anonymous &middot; No firm names captured &middot; Aggregate results only</p>
+                <p class="landing__meta">10 questions &middot; ~4 minutes &middot; Optional report subscription at end</p>
+            </div>
+        </div>
+
+        <!-- Screen 2: Question -->
+        <div id="screen-question" class="screen">
+            <div class="question">
+                <button id="btn-back-question" class="btn-back" type="button" aria-label="Go back">&larr; Back</button>
+                <p class="question__counter" id="question-counter"></p>
+                <h2 class="question__text" id="question-text"></h2>
+                <p class="question__hint" id="question-hint" hidden></p>
+                <div class="question__answers" id="question-answers"></div>
+                <textarea id="question-textarea" class="question__textarea" rows="4" placeholder="Type your response (optional)" hidden></textarea>
+                <button id="btn-next" class="btn btn--primary question__next" hidden>Next</button>
+            </div>
+        </div>
+
+        <!-- Screen 3: Thank You + Optional Capture -->
+        <div id="screen-thanks" class="screen">
+            <div class="thanks">
+                <p class="thanks__label">Thank You</p>
+                <h2 class="thanks__headline">We appreciate you sharing your perspective!</h2>
+
+                <div class="thanks__card">
+                    <h3 class="thanks__card-title">Want a copy of the survey results and access to our security index findings?</h3>
+                    <form id="capture-form" class="form" novalidate>
+                        <div class="form__field">
+                            <label for="field-name">Name <span class="optional">(optional)</span></label>
+                            <input type="text" id="field-name" name="name" autocomplete="name">
+                        </div>
+                        <div class="form__field">
+                            <label for="field-email">Email <span class="optional">(optional)</span></label>
+                            <input type="email" id="field-email" name="email" autocomplete="email">
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="checkbox" id="field-mailinglist" name="mailinglist">
+                            <label for="field-mailinglist">Also add me to 6lock's mailing list (occasional updates on PE security trends)</label>
+                        </div>
+                        <!-- Honeypot -->
+                        <div class="form__field hp-field" aria-hidden="true">
+                            <label for="field-website">Website</label>
+                            <input type="text" id="field-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn btn--primary">Submit</button>
+                        <button type="button" id="btn-skip-capture" class="btn btn--secondary">Skip &mdash; I don't need the report</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screen 4: Final Confirmation -->
+        <div id="screen-done" class="screen">
+            <div class="done">
+                <p class="done__label">Submitted</p>
+                <h2 class="done__headline">You're done.</h2>
+                <p class="done__body">Your responses are anonymous and recorded. You'll hear from us when the next <strong>PE Capital Trust Report</strong> publishes.</p>
+                <p class="done__body">Until then, learn more about the broader 6lock framework for PE capital security:</p>
+                <div class="done__ctas">
+                    <a href="https://www.6lock.com/security-index" target="_blank" rel="noopener" class="btn btn--secondary">Take the PE Security Index (for PE firms)</a>
+                    <a href="https://6lock.com" target="_blank" rel="noopener" class="btn btn--secondary">Visit 6lock.com</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
