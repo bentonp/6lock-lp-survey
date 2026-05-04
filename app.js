@@ -79,7 +79,7 @@ const QUESTIONS = [
   {
     id: 5,
     type: 'rating',
-    text: "How confident are you that your fund managers' current processes prevent unauthorized capital movement on capital calls and distributions?",
+    text: "How confident are you that your fund manager's current processes prevent unauthorized capital movement during capital calls and distributions?",
     scale: 5,
     labels: ['Not at all confident', 'Highly confident']
   },
