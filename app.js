@@ -120,7 +120,7 @@ const QUESTIONS = [
     id: 9,
     type: 'multi',
     max: 2,
-    text: "If a fund you've invested in disclosed a wire fraud incident — even one that didn't directly affect your capital — how would you respond?",
+    text: "If a fund you've invested in disclosed a wire fraud incident, even one that didn't directly affect your capital, how would you respond?",
     hint: 'Select up to 2.',
     answers: [
       { text: 'Reduce future commitments to that GP' },
