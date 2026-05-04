@@ -148,7 +148,7 @@ const QUESTIONS = [
     id: 11,
     type: 'open',
     optional: true,
-    text: "In one or two sentences, what's your biggest concern — fraud, friction, or otherwise — about how money moves in your private market investments today?",
+    text: "In one or two sentences, what's your biggest concern about how money moves in your private market investments today? e.g. Fraud, friction, experience, other.",
     hint: 'Optional.'
   }
 ];
