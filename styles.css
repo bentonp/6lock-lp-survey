@@ -144,6 +144,20 @@ body { font-family: var(--font-body); font-size: var(--font-size-base); line-hei
 .question__textarea { width: 100%; padding: var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: var(--font-size-base); color: var(--color-text); background: var(--color-bg); resize: vertical; transition: border-color var(--duration-fast) var(--ease); margin-top: var(--space-md); }
 .question__textarea:focus { outline: 0.125rem solid var(--color-primary-focus); outline-offset: 0.125rem; border-color: var(--color-primary); }
 
+/* "Other - please specify" text input (single-select) */
+.question__other-text { width: 100%; padding: var(--space-sm) var(--space-md); border: 1px solid var(--color-primary); border-radius: var(--radius-sm); font-family: var(--font-body); font-size: var(--font-size-md); color: var(--color-text); background: var(--color-bg); transition: border-color var(--duration-fast) var(--ease); margin-top: var(--space-md); }
+.question__other-text:focus { outline: 0.125rem solid var(--color-primary-focus); outline-offset: 0.125rem; }
+
+/* Matrix question */
+.matrix { display: flex; flex-direction: column; gap: var(--space-lg); margin-top: var(--space-sm); }
+.matrix-row { padding: var(--space-md); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); }
+.matrix-row__label { font-family: var(--font-headings); font-size: var(--font-size-md); font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-sm); }
+.matrix-row__scale { display: flex; gap: var(--space-xs); justify-content: space-between; }
+.matrix-btn { flex: 1; padding: var(--space-sm) var(--space-xs); border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-bg); font-family: var(--font-headings); font-size: var(--font-size-md); font-weight: 600; color: var(--color-navy); cursor: pointer; transition: all var(--duration-fast) var(--ease); -webkit-tap-highlight-color: transparent; min-width: 0; }
+.matrix-btn:hover { border-color: var(--color-primary); }
+.matrix-btn.selected { border-color: var(--color-primary); background: var(--color-primary); color: var(--color-text-light); }
+.matrix-row__labels { display: flex; justify-content: space-between; margin-top: var(--space-xs); font-family: var(--font-ui); font-size: var(--font-size-xs); color: var(--color-text-secondary); }
+
 /* Staggered entrance */
 .answer-card, .rating-btn { opacity: 0; transform: translateY(8px); animation: slideUp var(--duration-fast) var(--ease) forwards; }
 .answer-card:nth-child(1), .rating-btn:nth-child(1) { animation-delay: 0.05s; }

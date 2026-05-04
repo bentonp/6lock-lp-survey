@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LP Experience Survey | 6lock</title>
-    <meta name="description" content="A 4-minute, anonymous pulse of how Limited Partners experience capital calls and distributions today. Shape the first longitudinal LP experience dataset in PE.">
+    <title>The 2026 LP Capital Integrity Index | 6lock</title>
+    <meta name="description" content="6lock's annual survey of private market investors on the security, friction, and trust surrounding how money actually moves in private markets. ~3 minutes, anonymous.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https://api.emailjs.com https://script.google.com; img-src 'self' data:;">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,11 +31,14 @@
         <!-- Screen 1: Landing -->
         <div id="screen-landing" class="screen active">
             <div class="landing">
-                <p class="landing__label">LP Experience Survey</p>
-                <h1 class="landing__headline">How do you rate your current capital call experience?</h1>
-                <button id="btn-start" class="btn btn--primary">Share Your Perspective</button>
-                <p class="landing__trust">Anonymous &middot; No firm names captured &middot; Aggregate results only</p>
-                <p class="landing__meta">10 questions &middot; ~4 minutes &middot; Optional report subscription at end</p>
+                <p class="landing__label">6lock Annual Industry Survey</p>
+                <h1 class="landing__headline">The 2026 LP Capital Integrity Index</h1>
+                <p class="landing__body">6lock is conducting an annual survey of private market investors on the security, friction, and trust surrounding how money actually moves in private markets &mdash; capital calls, distributions, wire transfers, and identity verification.</p>
+                <p class="landing__body">Your perspective is what makes this report meaningful. The survey takes about three minutes and is fully anonymous; responses are reported only in aggregate.</p>
+                <p class="landing__body"><strong>Respondents who opt in at the end will receive the full report seven days before public release.</strong></p>
+                <button id="btn-start" class="btn btn--primary">Begin Survey &rarr;</button>
+                <p class="landing__trust">Anonymous &middot; Reported only in aggregate</p>
+                <p class="landing__meta">10 questions + 1 optional &middot; ~3 minutes</p>
             </div>
         </div>
 
@@ -48,6 +51,7 @@
                 <p class="question__hint" id="question-hint" hidden></p>
                 <div class="question__answers" id="question-answers"></div>
                 <textarea id="question-textarea" class="question__textarea" rows="4" placeholder="Type your response (optional)" hidden></textarea>
+                <input type="text" id="question-other-text" class="question__other-text" placeholder="Please specify..." hidden>
                 <button id="btn-next" class="btn btn--primary question__next" hidden>Next</button>
             </div>
         </div>
@@ -55,11 +59,13 @@
         <!-- Screen 3: Thank You + Optional Capture -->
         <div id="screen-thanks" class="screen">
             <div class="thanks">
-                <p class="thanks__label">Thank You</p>
-                <h2 class="thanks__headline">We appreciate you sharing your perspective!</h2>
+                <p class="thanks__label">Thank you</p>
+                <h2 class="thanks__headline">Your responses will help shape the 2026 LP Capital Integrity Index.</h2>
+                <p class="thanks__body">Published this summer.</p>
 
                 <div class="thanks__card">
-                    <h3 class="thanks__card-title">Want a copy of the survey results and access to our security index findings?</h3>
+                    <h3 class="thanks__card-title">Want it seven days before everyone else?</h3>
+                    <p class="thanks__card-subhead">Opt in below and we'll send you the full report &mdash; plus an executive summary tailored to your investor profile &mdash; a week before public release.</p>
                     <form id="capture-form" class="form" novalidate>
                         <div class="form__field">
                             <label for="field-name">Name <span class="optional">(optional)</span></label>
@@ -69,9 +75,13 @@
                             <label for="field-email">Email <span class="optional">(optional)</span></label>
                             <input type="email" id="field-email" name="email" autocomplete="email">
                         </div>
+                        <div class="form__field">
+                            <label for="field-firm">Firm <span class="optional">(optional)</span></label>
+                            <input type="text" id="field-firm" name="firm" autocomplete="organization">
+                        </div>
                         <div class="form__checkbox">
                             <input type="checkbox" id="field-mailinglist" name="mailinglist">
-                            <label for="field-mailinglist">Also add me to 6lock's mailing list (occasional updates on PE security trends)</label>
+                            <label for="field-mailinglist">Notify me when the next survey opens</label>
                         </div>
                         <!-- Honeypot -->
                         <div class="form__field hp-field" aria-hidden="true">
@@ -80,6 +90,7 @@
                         </div>
                         <button type="submit" class="btn btn--primary">Submit</button>
                         <button type="button" id="btn-skip-capture" class="btn btn--secondary">Skip &mdash; I don't need the report</button>
+                        <p class="form__privacy">Survey responses are anonymous and reported only in aggregate. Email addresses are collected separately and never linked to individual responses.</p>
                     </form>
                 </div>
             </div>
