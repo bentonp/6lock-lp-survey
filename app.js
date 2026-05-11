@@ -14,8 +14,8 @@ const CONFIG = {
   websiteUrl: 'https://6lock.com',
   securityIndexUrl: 'https://www.6lock.com/security-index',
   // Google Apps Script web app URL (deploy a NEW Apps Script for this survey - do NOT reuse Security Index endpoint)
-  sheetsWebhookUrl: 'YOUR_LP_SURVEY_WEBHOOK_URL',
-  webhookToken: '6lock-lpindex-2026-CHANGEME'
+  sheetsWebhookUrl: 'https://script.google.com/macros/s/AKfycbxDKYHeJpxwQGdOgq2dMLBL2Wn-p9bYIIa_PH12hudJXifA1yQM0BIULD2YBlwatzl7/exec',
+  webhookToken: '6lock-lpindex-2026-aP9k4NxzE7'
 };
 
 // ===== QUESTIONS =====
